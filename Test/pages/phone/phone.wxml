@@ -1,0 +1,35 @@
+wxml
+<!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<!-- 需要使用 button 来授权登录 -->
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<!-- <view wx:else>请升级微信版本</view> -->
+<view wx:for="{{phone}}" wx:key="index">
+    <text>{{item}}</text>
+</view>
+<!-- map.wxml -->
+<map id="myMap" show-location />
+
+<button type="primary" bindtap="getCenterLocation">获取位置</button>
+<button type="primary" bindtap="moveToLocation">移动位置</button>
+<button type="primary" bindtap="translateMarker">移动标注</button>
+<button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
+<button bindtap='click'>扫一扫</button>
+<!-- <view class="page-body">
+    <view class="page-body-wrapper">
+        <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
+        <view class="btn-area">
+            <button type="primary" bindtap="takePhoto">拍照</button>
+        </view>
+        <view class="btn-area">
+            <button type="primary" bindtap="startRecord">开始录像</button>
+        </view>
+        <view class="btn-area">
+            <button type="primary" bindtap="stopRecord">结束录像</button>
+        </view>
+        <view class="preview-tips">预览</view>
+        <image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
+        <video wx:if="{{videoSrc}}" class="video" src="{{videoSrc}}"></video>
+    </view>
+</view> -->

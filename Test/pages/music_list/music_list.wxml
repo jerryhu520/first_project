@@ -1,0 +1,9 @@
+<view>
+  <view style='text-align:center' wx:for="{{musicList}}" wx:key="{{index}}">
+    <text>{{item.music_name}}</text>
+    <view>
+      <text>{{item.singer}} - {{item.album}}</text>
+    </view>
+    <audio poster="{{IP}}:3222/img/{{item.img}}" name='{{item.music_name}}' author="{{item.singer}}" src="{{IP}}:3222/music/{{item.src}}" controls></audio>
+  </view>
+</view>
